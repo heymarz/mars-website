@@ -1,4 +1,208 @@
 body {
-    background: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #7B68EE;
+    max-width: 100%;
+    overflow: auto;    
+}
+h1, Footer {
+    background-color: #9FCDF9;
+    color: black;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin-top: 0;
+    text-decoration: none;
+}
+h1 {
+    text-shadow: 1px 2px #000000;
+}
+footer a:hoover {
+    color: rgba(180, 180, 180, 1);
+}
+section {
+    margin: 0 15px 0 15px;
+    font-size: 20px;
+    padding: 0 40px 0 40px;
+}
+section#intro {
+    background-color: #B9F8F6;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#buttons button {
+    padding: 10px;
+    margin: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+#buttons button:hover {
+    color: white;
+    background-color: black;
+}
+
+.blue {
+    color: white;
+    background-color: blue;
+}
+
+.round-borders {
+    border-radius: 10px;
+    border: 1px solid blue);
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+#herdingGroup {
+    display: flex;
+}
+#houndGroup {
+    display: flex;
+}
+#terrierGroup {
+    display: flex;
+}
+
+#herdingGroup, #houndGroup, #terrierGroup {
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;    
+}
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 350px;
+    margin: 5px;
+    width: 32%;
+}
+
+.figure img {
+    margin: 10px;
+    min-width: 340px;
+    width: 50%;
+}
+
+.figure p {
+    display: none;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+.hover-shadow:hover {
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.19);
+}
+#lightbox {
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.3s;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 25%;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#lightbox-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#lightbox-content img {
+    width: 90%;
+    box-shadow: 5px 8px 15px black;
+}
+
+#lightbox-content p {
+    width: 90%;
+    color: white;
+}
+
+.close {
+    color: white;
+    margin-right: 15px;
+    font-size: 35px;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+    section {
+        padding: 0 20px 0 20px;
+    }
     
+    #lightbox {
+        right: 12.5%;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 500px) {    
+    section {
+        padding: 0;
+        margin: 0;
+    }
+
+    section#intro {
+        padding: 0 10px 0 10px;
+    }
+    
+    #lightbox {
+        right: 0%;
+        width: 100%;
+    }
+
+    .figure img {
+        min-width: 150px;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #buttons button {
+        width: 50%;
+
+    }
 }
